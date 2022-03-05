@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Content extends React.Component 
 {
@@ -11,10 +12,14 @@ class Content extends React.Component
     {
         return(
             <div>
-                <h1>woof</h1>
+                <main>{this.props.children}</main>
             </div>
         );
     }
+}
+
+Content.propTypes = {
+    children: PropTypes.node.isRequired
 }
 
 export default Content

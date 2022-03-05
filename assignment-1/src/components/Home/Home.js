@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './Home.css';
 
 class Home extends React.Component 
@@ -12,7 +14,7 @@ class Home extends React.Component
     {
         super(props);
         this.state = {
-            myState: 'This is an introduction to React JS'
+            myState: this.props.title
         }
     }
     
@@ -34,13 +36,18 @@ class Home extends React.Component
     //
     // ----------------------------------------    
     render()
-    {
+    {        
         return(
             <div>
-                {this.state.myState}
+                <p>{this.state.myState}</p>
             </div>
         );
     }
+}
+
+Home.propTypes =
+{
+    title: PropTypes.string
 }
 
 export default Home

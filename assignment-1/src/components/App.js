@@ -13,10 +13,20 @@ class App extends React.Component
     {
       return (
         <div className="App">
-            <Header/>
-            <Content/>
-            <Home/>          
-            <Footer/>
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <Header title="Welcome to WebDevTech React" url="http://localhost:3000"/>
+            </header>
+            
+            <content className="App-content">
+                <Content>
+                    <Home title="This is an introduction to React JS"/>
+                </Content>
+            </content>
+            
+            <footer className="App-footer">
+                <Footer myText="@ WebDevTech React 2021" />
+            </footer>
         </div>
       );
     }
