@@ -1,2 +1,20 @@
 import React from 'react';
-import '../../index.css';
+
+class Content extends React.Component 
+{
+    // ----------------------------------------
+    // 
+    // render
+    //
+    // ----------------------------------------    
+    render()
+    {
+        return(
+            <div>
+                <h1>woof</h1>
+            </div>
+        );
+    }
+}
+
+export default Content
